@@ -68,7 +68,7 @@ function renderEntityMention(data) {
 }
 
 function renderEntityMedia(data) {
-	return `[${escapeMarkdownPart(data.display_url)}](${data.url})`;
+	return `![](${data.media_url})`;
 }
 
 function renderEntityHashtag(data) {
@@ -84,7 +84,7 @@ function renderEntitySymbol(data) {
 }
 
 function renderEntityUrl(data) {
-	return `[${escapeMarkdownPart(data.display_url)}](${data.url} "${data.expanded_url}")`;
+	return `[${escapeMarkdownPart(data.expanded_url)}](${data.url} "${data.expanded_url}")`;
 }
 
 function renderEntity(type, data) {
